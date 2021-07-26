@@ -7,7 +7,7 @@ import searchYoutube from 'youtube-api-v3-search';
 import axios from 'axios';
 
 //youtube api
-const YOUTUBE_API_KEY = 'AIzaSyCm5q9_3nXn4OL84BNJ6MWS6vSGa3WUyyM';
+const YOUTUBE_API_KEY = 'Youtube API';
 
 class App extends Component{
 
