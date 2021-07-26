@@ -20,10 +20,10 @@ app.use(express.json());
 //mysql
 
 let connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'takumi_database_8817',
-  database: 'appsdatabase'
+  host: 'ホスト',
+  user: 'ユーザー名',
+  password: 'パスワード',
+  database: 'データベース'
 });
 
 //get
