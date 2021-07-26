@@ -1,0 +1,12 @@
+/* #searchWrapper{
+    border: 1px solid white;
+} */
+#searchButton{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+#searchField{
+    border: none;
+}
