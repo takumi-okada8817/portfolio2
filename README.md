@@ -8,13 +8,25 @@
 
 使用技術
 
-・React
+・React 17.0.2
+
+・Node.js 12.18.3
 
 ・JavaScript
 
 ・MySQL 5.7.31
 
 ・Apache
+
+ライブラリ
+
+・axios 0.21.1
+
+・mysql 2.18.1
+
+・youtube-api-v3-search
+
+・react-youtube
 
 機能
 
