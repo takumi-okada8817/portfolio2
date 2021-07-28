@@ -14,10 +14,11 @@
 
 #### データベース
 
-| id | int(11) |
-|:---:|:---:|
-| videoId | varchar(12) |
-| tag | varchar(20) |
+|Column|Type|Options|
+| :---: | :---: | :---: |
+| id | int(11) |null:false|
+| videoId | varchar(12) |null:false|
+| tag | varchar(20) |null:false|
 
 #### ライブラリ
 * axios 0.21.1
