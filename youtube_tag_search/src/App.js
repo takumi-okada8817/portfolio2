@@ -15,6 +15,8 @@ class App extends Component{
     super(props);
     this.state = {
       list: [],
+      term: null,
+      nextPageToken: null,
       selectedItem: null,
       description: null,
       tagInfo: "10個までタグを登録できます",
@@ -24,15 +26,37 @@ class App extends Component{
 
   //inputを取得する
   getYoutubeList = (term)=>{
-
     searchYoutube(YOUTUBE_API_KEY, 
       {
         q:term,
-        maxResults: 10
+        maxResults: 5
       },(error,result) =>{
 
         this.setState({list: result.items});
-        console.log(result);
+        this.setState({nextPageToken: result.nextPageToken});
+        this.setState({term: term});
+        console.log(this.state.list);
+    });
+  }
+
+  //get youtube list more
+  getYoutubeListMore = (term, nextPageToken)=>{
+    console.log(this.state.list);
+    searchYoutube(YOUTUBE_API_KEY, 
+      {
+        q:term,
+        maxResults: 5,
+        pageToken: nextPageToken
+      },(error,result) =>{
+        console.log(result.items.length);
+        for(let i=0; i <= result.items.length-1; i++){
+          this.state.list.push(
+            result.items[i]
+          );
+        }
+        console.log(this.state.list);
+        //this.setState({list: result.items + result.items});
+        this.setState({nextPageToken: result.nextPageToken});
     });
   }
 
@@ -131,7 +155,7 @@ class App extends Component{
         <Video video={this.state.selectedItem} getDescription={this.getDescription} description={this.state.description} tagInfo={this.state.tagInfo} handleNotice={this.handleNotice} registerNotice={this.state.registerNotice} refresh={this.refresh}/>
 
         <div id="listWrapper">
-          <List list={this.state.list} handleSelectedItem={this.handleSelectedItem}/>
+          <List list={this.state.list} handleSelectedItem={this.handleSelectedItem} getYoutubeListMore={this.getYoutubeListMore} term={this.state.term} nextPageToken={this.state.nextPageToken}/>
         </div>
 
       </div>
