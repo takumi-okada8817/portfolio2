@@ -12,9 +12,9 @@
 
 ・Node.js 12.18.3
 
-・JavaScript
-
 ・MySQL 5.7.31
+
+・JavaScript
 
 ライブラリ
 
@@ -29,7 +29,5 @@
 機能
 
 ・タグ登録機能(Axios)
-
-・
 
 ・検索機能
