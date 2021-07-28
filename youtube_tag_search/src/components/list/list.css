@@ -1,0 +1,16 @@
+.loadMore{
+    text-align: center;
+    padding: 10px 0px 0px;
+}
+.loadMore button{
+    font-family: 'Baloo Chettan 2', cursive;
+    background-color: rgb(89, 128, 106);
+    color: aliceblue;
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+.renderListWrapper{
+    text-align: center;
+}
