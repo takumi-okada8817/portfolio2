@@ -16,8 +16,6 @@
 
 ・MySQL 5.7.31
 
-・Apache
-
 ライブラリ
 
 ・axios 0.21.1
