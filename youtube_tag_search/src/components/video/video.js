@@ -31,7 +31,7 @@ const Video = ({video,getDescription,description,tagInfo,handleNotice,registerNo
 
                     <TagArea tagInfo={tagInfo} videoId={video.id.videoId} key={video.id.videoId} handleNotice={handleNotice} registerNotice={registerNotice} refresh={refresh}/>
 
-                    <div id="detail" style={{border: 'solid black 1px',width: '640px'}}>
+                    <div id="detail" style={{border: 'solid black 1px'}}>
                         <h3>{video.snippet.title}</h3>
                         <br/>
                         <p id="description">{description}</p>
