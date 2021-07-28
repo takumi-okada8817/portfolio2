@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Youtube from 'react-youtube';
 import './video.css';
 import TagArea from '../tag/tagArea';
 
 const Video = ({video,getDescription,description,tagInfo,handleNotice,registerNotice,refresh})=>{
+
+    //自動スクロール
+    const autoScroll = ()=>{
+        document.getElementById("player").scrollIntoView();
+    }
+  
+    useEffect(()=>{
+        autoScroll();
+    },[video]);
 
     if(video !== null){
 
