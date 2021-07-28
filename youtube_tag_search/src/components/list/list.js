@@ -20,7 +20,7 @@ const List = ({list, handleSelectedItem, getYoutubeListMore, term, nextPageToken
     }else{
         return(
 
-            <div>
+            <div className="renderListWrapper">
                 <div className="renderList">{renderList}</div>
                 {console.log(renderList)}
                 <div className="loadMore">
